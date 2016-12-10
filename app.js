@@ -6,7 +6,7 @@ const app = new Koa();
 var router = Router();
 
 // response
-router.use('/', IndexRouter.routes());
+router.use('/index', IndexRouter.routes());
 
 app.use(Cors());
 
@@ -14,7 +14,7 @@ app
     .use(router.routes())
     .use(router.allowedMethods());
 
-app.listen(3000, () => console.log('server started 3000'));
+app.listen(7400, () => console.log('server started 7400'));
 
 export default app
 
